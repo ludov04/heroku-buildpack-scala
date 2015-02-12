@@ -116,6 +116,11 @@ HEROKU_PLUGIN="HerokuPlugin.scala"
 mkdir -p "$SBT_USER_HOME/.sbt/plugins"
 cp -p $OPT_DIR/$HEROKU_PLUGIN $SBT_USER_HOME/.sbt/plugins/$HEROKU_PLUGIN
 
+
+mkdir -p "$SBT_USER_HOME/.ivy2/cache/com.atlassian.jwt/jwt-api/jars"
+mkdir -p "$SBT_USER_HOME/.ivy2/cache/com.atlassian.jwt/jwt-core/jars"
+wget -P "$SBT_USER_HOME/.ivy2/cache/com.atlassian.jwt/jwt-api/jars" http://jcenter.bintray.com:80/com/atlassian/jwt/jwt-api/1.2.3/jwt-api-1.2.3.jar
+wget -P "$SBT_USER_HOME/.ivy2/cache/com.atlassian.jwt/jwt-core/jars" http://jcenter.bintray.com:80/com/atlassian/jwt/jwt-core/1.2.3/jwt-core-1.2.3.jar
 # download and cache the dependencies if this is the first build
 if [ ! -d "$SBT_USER_HOME/.ivy2" ]; then
   if is_sbt_native_packager $BUILD_DIR || is_play $BUILD_DIR; then
