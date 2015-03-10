@@ -47,7 +47,7 @@ jdk_overlay ${BUILD_DIR}
 status_done
 
 #install npm
-sudo apt-get install npm
+apt-get install npm
 
 # home directory from perspective of SBT; we rename
 # it because otherwise the project root and $HOME
