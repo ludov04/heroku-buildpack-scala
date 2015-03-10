@@ -133,7 +133,6 @@ if [ ! -d "$SBT_USER_HOME/.ivy2" ]; then
 fi
 which npm
 which nodejs
-ln -s $BUILD_DIR/.apt/usr/bin/nodejs /usr/bin/nodejs
 # build app
 cd customer/ui
 npm install -g grunt-cli
