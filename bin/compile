@@ -135,6 +135,7 @@ fi
 # build app
 cd customer/ui
 npm install -g grunt-cli
+npm install -g bower
 npm install -g yo
 npm install
 bower install
