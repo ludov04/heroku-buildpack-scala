@@ -131,7 +131,8 @@ if [ ! -d "$SBT_USER_HOME/.ivy2" ]; then
     cache_copy $SBT_USER_HOME/.ivy2 $BUILD_DIR $CACHE_DIR
   fi
 fi
-
+which npm
+whereis nodejs
 # build app
 cd customer/ui
 npm install -g grunt-cli
