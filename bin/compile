@@ -83,9 +83,7 @@ SBT_URL="http://typesafe.artifactoryonline.com/typesafe/ivy-releases/org.scala-s
 ## instead.
 SBT_TASKS="update clean grunt compile stage"
 
-#install npm
 
-curl -L https://npmjs.com/install.sh | sh
 
 # To enable clean compiles, configure the environment to clean:
 # $ heroku config:set SBT_CLEAN=true
